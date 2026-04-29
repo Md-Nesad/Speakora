@@ -1,9 +1,9 @@
-import { grammarData } from "@/data/grammer";
+import { grammarData } from "@/features/grammer/data/grammer";
+import Lession from "@/features/shared/components/Lession";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Grammar() {
   const router = useRouter();
@@ -14,16 +14,12 @@ export default function Grammar() {
   };
 
   return (
-    <SafeAreaView style={styles.container} edges={["top"]}>
+    <View style={styles.container}>
       <ScrollView>
-        <Text style={styles.heading}>Grammar Mastery</Text>
-
-        <Text style={styles.subText}>
-          Learn English grammar step by step with structured lessons and real
-          examples. You don’t need to memorize all grammar rules to speak
-          English. By practicing these core grammar patterns repeatedly, you
-          will be able to speak English fluently.
-        </Text>
+        <Lession
+          title="Grammer"
+          description="Learn English grammar step by step with structured lessons and real examples. You don’t need to memorize all grammar rules to speak English. By practicing these core grammar patterns repeatedly, you will be able to speak English fluently."
+        />
 
         {grammarData.map((topic, index) => (
           <View key={topic.id}>
@@ -70,7 +66,7 @@ export default function Grammar() {
           </View>
         ))}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -86,13 +82,6 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     color: "#F1F5F9",
     marginTop: 10,
-  },
-
-  subText: {
-    marginTop: 10,
-    fontSize: 15,
-    color: "#94A3B8",
-    marginBottom: 10,
   },
 
   card: {

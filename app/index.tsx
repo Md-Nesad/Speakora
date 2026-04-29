@@ -1,3 +1,4 @@
+import FeatureCard from "@/features/landing/components/FeatureCard";
 import { useRouter } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
@@ -17,33 +18,7 @@ export default function Landing() {
 
       {/* Feature Cards */}
       <View style={styles.cardContainer}>
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>📘 Grammar</Text>
-          <Text style={styles.cardText}>
-            Clear rules with simple real-life examples.
-          </Text>
-        </View>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>📚 Vocabulary</Text>
-          <Text style={styles.cardText}>
-            Learn useful words for daily conversation.
-          </Text>
-        </View>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>🗣 Sentence Practice</Text>
-          <Text style={styles.cardText}>
-            Build correct English sentences easily.
-          </Text>
-        </View>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>🧪 Test Yourself</Text>
-          <Text style={styles.cardText}>
-            Track progress with simple practice tests.
-          </Text>
-        </View>
+        <FeatureCard />
       </View>
 
       {/* Button */}
@@ -86,27 +61,6 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginTop: 20,
     gap: 12,
-  },
-
-  card: {
-    backgroundColor: "#111827",
-    padding: 15,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "#1F2937",
-  },
-
-  cardTitle: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#F1F5F9",
-  },
-
-  cardText: {
-    marginTop: 5,
-    fontSize: 13,
-    color: "#9CA3AF",
-    lineHeight: 18,
   },
 
   button: {
