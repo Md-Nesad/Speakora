@@ -1,12 +1,13 @@
 import FeatureCard from "@/features/landing/components/FeatureCard";
 import { useRouter } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Landing() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.headerBox}>
         <Text style={styles.welcome}>👋 Welcome to English Journey</Text>
@@ -28,7 +29,7 @@ export default function Landing() {
       >
         <Text style={styles.buttonText}>Start Learning 🚀</Text>
       </Pressable>
-    </View>
+    </SafeAreaView>
   );
 }
 

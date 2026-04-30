@@ -65,7 +65,7 @@ export default function TabsLayout() {
         />
 
         <Tabs.Screen
-          name="sentense"
+          name="sentence"
           options={{
             title: "Sentence",
             tabBarIcon: ({ color, size }) => (
